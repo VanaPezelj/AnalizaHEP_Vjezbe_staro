@@ -1,0 +1,9 @@
+total 17
+drwxr-xr-x. 2 vpezelj zh 2048 Ožu 27 19:11 .
+drwxr-xr-x. 3 vpezelj zh 2048 Ožu 15 07:23 ..
+-rw-rw-r--. 1 vpezelj zh  120 Ožu 27 11:57 first.cpp
+-rwxr-xr-x. 1 vpezelj zh 8800 Ožu 27 11:57 first.o
+-rw-rw-r--. 1 vpezelj zh   20 Ožu 15 09:14 first.py
+-rw-rw-r--. 1 vpezelj zh  158 Ožu 15 09:05 graf.py
+-rw-r--r--. 1 vpezelj zh    0 Ožu 27 19:12 output.txt
+-rwxr--r--. 1 vpezelj zh   72 Ožu 27 19:11 skripta.sh
