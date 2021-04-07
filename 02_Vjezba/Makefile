@@ -1,12 +1,13 @@
-all: say_hello
+CC = g++				#varijabla CC sadrži g++
+CFLAGS = -I.	
+DEPS = ElementaryParticle.h
 
-say_hello:
-	@echo "Hello World"
+%.o: %.cpp $(DEPS)			#pravilo koje vrijedi za sve file-ove .o
+	$(CC) -o $@ $< $(CFLAGS)
 
-generate:
-	@echo "Just adding some files..."
-	touch file-{1..10}.txt
+analyzer: analyzer.o ElementaryParticle.o
+	$(CC) -o analyzer.o ElementaryParticle.o
 
-clean:
-	@echo "Deleting some files"
-	rm *.txt
+#clean:
+#	@echo "Deleting .o files"
+#	rm *.o
