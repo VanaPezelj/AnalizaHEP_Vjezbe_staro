@@ -8,10 +8,14 @@ class ElementaryParticle{
         string ime;
         float masa;
         bool bozon;
-        void printInfo();
         float px,py,pz,E;
 
+        void printInfo();
+
         void setP(float px, float py, float pz);
+
+        //fja za ispis transverzalne kolicine gibanja
+        void printPtrans();
 
         //void inicijalizacija(string i, float m, bool b);
         ElementaryParticle(string i, float m, bool b);
@@ -57,6 +61,12 @@ void ElementaryParticle::printInfo()
     cout << "\n";
 }
 
+void ElementaryParticle::printPtrans()
+{
+    float pt;
+    pt=sqrt(px*px + py*py);
+    cout << "\n Transverzalna kolicina gibanja iznosi " << pt << "\n" ;
+}
 
 int main(){
     ElementaryParticle Higgs_bozon("Higgsov bozon",124.97,true);
