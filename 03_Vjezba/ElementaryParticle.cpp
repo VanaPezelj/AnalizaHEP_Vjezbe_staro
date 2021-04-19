@@ -23,7 +23,7 @@ ElementaryParticle::~ElementaryParticle()    //Destructor
 
 }
 
-void ElementaryParticle::printInfo()
+/*void ElementaryParticle::printInfo()
 {
     cout << "\n";
     cout << "Ime čestice: " << ime << "\n" ;
@@ -32,7 +32,7 @@ void ElementaryParticle::printInfo()
         cout << "Bozon: da \n" ;
     else
         cout << "Bozon: ne \n" ;
-}
+}*/
 
 void ElementaryParticle::setP(float p_x, float p_y, float p_z)
 {
@@ -41,13 +41,14 @@ void ElementaryParticle::setP(float p_x, float p_y, float p_z)
     pz = p_z;
     E = sqrt(px*px + py*py + pz*pz + masa*masa);
 
-    cout << "\nEnergija " << ime << " :  " << E << "\n\n" ;
+    //cout << "\nEnergija " << ime << " :  " << E << "\n\n" ;
 }
 
 
 void ElementaryParticle::transP()
 {
-    cout << "\nTrans. kol. gib." << ime << " :   " << sqrt(px*px +py*py) << "\n\n";
+    pt = sqrt(px*px +py*py);
+    //cout << "\nTrans. kol. gib." << ime << " :   " << pt << "\n\n";
 }
 
 
@@ -101,11 +102,14 @@ void ElementaryParticle::bosonDecay(ElementaryParticle *particle1, ElementaryPar
 
     // prvo prvoj cestici odredimo kolicine gibanja i postavimo ih pomocu metode setP
     particle1 -> setP(px*(random_px/100.), py*(random_py/100.), pz*(random_pz/100.));
+    particle1 -> transP();
 
     // sada druga cestica ima preostali iznos komponente kolicine gibanja
     // sada kada je postavljena px, py i pz od cestice 1 mozemo postavit za cesticu 2
     // od kolicine gibanja glavne cestice oduzmemo kolicinu gibanja prve iz raspada
     particle2 -> setP(px - particle1 -> px, py - particle1 -> py, pz - particle1 -> pz);
+    particle2 -> transP();
+
 
 }
 

@@ -15,6 +15,7 @@ class ElementaryParticle
         bool bozon;
 
         float px,py,pz,E;
+        float pt;
 
         ElementaryParticle(string ime, float mass, bool bozon); //Constructor
         ~ElementaryParticle(); //Destructor
