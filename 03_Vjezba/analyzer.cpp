@@ -84,6 +84,5 @@ int main()
         decayParticle_2->~ElementaryParticle();
    
     
-    
     return 0;
 }
